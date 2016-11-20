@@ -1,9 +1,15 @@
+<div class="container">
 <h3>Home</h3>
 
-<div role="tabpanel">
-    <uib-tabset active="active">
-        <uib-tab index="$index" ng-repeat="tab in homeCtrl.tabs" heading="Tab {{$index+1}}">
-            <h1>Tab {{$index+1}}</h1>
-        </uib-tab>
-    </uib-tabset>
+<div class="pull-right">
+    <button data-ng-click="homeCtrl.addTab()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+</div>
+<uib-tabset active="active">
+    <uib-tab index="$index" ng-repeat="tab in homeCtrl.tabs" heading="Tab {{$index+1}}">
+        <uib-tab-heading>
+            Tab {{$index+1 }} <button class="glyphicon glyphicon-remove" data-ng-click="homeCtrl.removeTab($index)"></button>
+        </uib-tab-heading>
+        <h1>Tab {{$index+1}}</h1>
+    </uib-tab>
+</uib-tabset>
 </div>

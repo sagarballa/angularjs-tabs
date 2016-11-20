@@ -18,7 +18,7 @@
         }
         
         function removeTab(index) {
-            vm.tabs.slice(index,1);
+            vm.tabs.splice(index,1);
         }
         
         function init(){

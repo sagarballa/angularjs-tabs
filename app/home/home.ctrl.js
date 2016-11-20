@@ -10,9 +10,12 @@
         vm.addTab = addTab;
         vm.removeTab = removeTab;
         
+        var tabCounter = 0;
         function addTab() {
+            tabCounter++;
             var tab = {
-                view : "test"
+                view : "test",
+                counter : tabCounter
             }
             vm.tabs.push(tab);
         }

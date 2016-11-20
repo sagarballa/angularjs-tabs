@@ -1,1 +1,9 @@
 <h3>Home</h3>
+
+<div role="tabpanel">
+    <uib-tabset active="active">
+        <uib-tab index="$index" ng-repeat="tab in homeCtrl.tabs" heading="Tab {{$index+1}}">
+            <h1>Tab {{$index+1}}</h1>
+        </uib-tab>
+    </uib-tabset>
+</div>
